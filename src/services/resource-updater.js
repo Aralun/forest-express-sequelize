@@ -6,7 +6,7 @@ import ResourceGetter from './resource-getter';
 class ResourceUpdater {
   constructor(model, params, newRecord, user) {
     this._model = model.unscoped();
-    this._params = params;
+    this._params = { timezone: 'Europe/Paris', ...params };
     this._newRecord = newRecord;
     this._user = user;
   }
